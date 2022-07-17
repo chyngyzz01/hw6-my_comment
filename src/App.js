@@ -4,6 +4,7 @@ import Comment from './comments/Comment'
 function App() {
 	const comment = [
 		{
+			id: 1,
 			date: new Date(),
 			text: 'I hope you enjoy learning React!',
 			author: {
@@ -13,6 +14,7 @@ function App() {
 			},
 		},
 		{
+			id: 2,
 			date: new Date(),
 			text: 'I hope you enjoy learning React!',
 			author: {
@@ -22,6 +24,7 @@ function App() {
 			},
 		},
 		{
+			id: 3,
 			date: new Date(),
 			text: 'I hope you enjoy learning React!',
 			author: {
@@ -36,6 +39,7 @@ function App() {
 		<div className='App'>
 			{comment.map((item) => (
 				<Comment
+					key={item.id}
 					author={item.author}
 					text={item.text}
 					date={item.date}
